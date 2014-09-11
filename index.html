@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自动登陆</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="js/jquery-1.8.2.js"></script>
+	<script type="text/javascript" src="js/md5.js"></script>
+	<script type="text/javascript" src="js/init.js"></script>
+</head>
+<body>
+	<form id="form" onsubmit = "return false;">
+			<input name="name" type="text" placeholder="Name">
+			<input name="pass" type="password" placeholder="Pass">
+			<input type="checkbox" name="check" value="自动登陆"><span class="auto">自动登陆</span>
+			<button name="submit" class="submit">登陆</button>
+	</form>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded',function (){
+				$('#form').autoSubmit("php.php");
+		},false);
+	</script>
+</body>
+</html>
