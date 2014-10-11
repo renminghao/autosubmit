@@ -10,8 +10,7 @@ $.fn.autoSubmit = function (address){
 			};
 			var submit = {
 				autoCheck	: function (){
-							var cookieArray = document.cookie;
-							var cookieArrayTemp = cookieArray.split("; ");
+							var cookieArray = document.cookie, cookieArrayTemp = cookieArray.split("; ");
 							for(var i = 0 ; i < cookieArrayTemp.length ; i++){
 								var cookieArrayTempName_Pass = cookieArrayTemp[i].split("=");
 								if(cookieArrayTempName_Pass[0] == 'username'){
@@ -48,9 +47,7 @@ $.fn.autoSubmit = function (address){
 				saveUser 	: function (){
 					config.isChecked = $(config._this_check)[0].checked ? true : false;
 					if(config.isChecked){
-							var cookieName = $(config._this_name).val();
-							var cookiePass = $(config._this_pass).val();
-							var cookiePass = hex_md5(cookiePass);
+							var cookieName = $(config._this_name).val(),cookiePass = $(config._this_pass).val(),cookiePass = hex_md5(cookiePass);
 							document.cookie = "username="+cookieName;
 							document.cookie = "userpass="+cookiePass;
 							$.ajax({
