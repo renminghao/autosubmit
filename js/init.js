@@ -5,8 +5,8 @@ $.fn.autoSubmit = function (address){
 				"_this_check"		: $(this).find('input[name = check]'),
 				"_this_button"		: $(this).find('button[name=submit]'),
 				"_this_isCkecked"	: false,
-				"name"				: null,
-				"pass"				: null
+				"name"			: null,
+				"pass"			: null
 			};
 			var submit = {
 				autoCheck	: function (){
